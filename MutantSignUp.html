@@ -1,3 +1,9 @@
+<?php
+    include "connection.php";
+    include "query1.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="is">
 <html>
@@ -10,17 +16,17 @@
 </head>
 <body>
 
-<form action="signUps.html">
+<form action="input.php" method="POST">
   <div class="imgcontainer">
     <img src="myndir/img_mutant.jpg" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
     <label><b>Your name</b></label>
-    <input type="text" placeholder="Enter your name" name="uname" required>
+    <input type="text" placeholder="Enter your name" name="name" required>
 
     <label><b>Your mutants name</b></label>
-    <input type="text" placeholder="Enter mutant name" name="mname" required>
+    <input type="text" placeholder="Enter mutant name" name="mutantName" required>
 
     <label><b>Email</b></label>
     <input type="text" placeholder="Enter email" name="email" required>
