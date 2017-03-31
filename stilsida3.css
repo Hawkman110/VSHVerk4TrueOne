@@ -1,0 +1,230 @@
+
+body {
+  max-width:60em; /*960px*/
+  margin: 0 auto;
+  line-height: 1.4;
+}
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grid {
+  margin: 0 auto;
+  width: 64em;     /*notið em, frekar en px, 960px;*/
+}
+header, 
+article,
+aside,
+footer {
+  padding-left: 1.875em; /*30px*/
+  padding-right: 1.875em;
+}
+
+header{
+ padding: 0; 
+}
+
+input{
+  display: none;
+}
+
+input:checked ~ nav{
+max-height: 500px;
+transition-duration: 1s;
+
+}
+
+input:checked + label span{
+  transform: rotate(90deg);
+}
+
+label{
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  background-color: grey;
+}
+
+label span{
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+header nav {
+  
+  text-align: center;
+  background-color: darkgrey;
+  max-height: 0;
+  overflow: hidden;
+}
+
+  header nav a{
+  padding: 0.7em;
+  border: 1px solid black;
+  background-color: grey;
+  display: block;
+  color: white;
+  font-size: 1em;
+}
+
+header nav a:hover
+{
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear; 
+  background-color: black;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav {
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding: 0 0 1em 0; /* = margin-bottom */
+}
+
+.sMedia a{
+border: solid 0.5px black;
+}
+
+.sMedia a:hover{
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+  background-color: black;
+  border-radius: 6px;
+}
+
+/*
+  ========================================
+  Grid system
+  ========================================
+*/
+.grid,
+.col-1-3,
+.col-2-3,
+.col-1-2 {
+  padding: 0 1em; /*0 top-bottom / 16px L R*/
+}
+.col-1-3,
+.col-2-3,
+.col-1-2  
+{
+  float:left;  /* var display:inline-block -> er verri lausn þar sem "white space" er virkt á milli html taga */
+  vertical-align: top;
+}
+.col-1-3 {
+  width: 33.333%;
+}
+.col-2-3 {
+  width: 66.666%;
+}
+.col-1-2 {
+  width: 50%;
+}
+/*
+  ========================================
+  Social buttons
+  ========================================
+*/
+.sMedia {
+  text-align: center;
+  background-color: #007;
+}
+.sMedia a {
+  display: inline-block;
+  padding: .5em 1em;
+  color:white;
+}
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+/*
+  ========================================
+  Floats
+  ========================================
+*/
+.flleft {
+  float: left;
+}
+.flright {
+  float: right;
+}
+
+@media (min-width: 48em){
+
+
+  header li
+  {
+    display: inline-block;
+    margin: 0 -3px;
+  }
+
+   header a
+  {
+    display: inline-block;
+  }
+
+  label
+  {
+    display: none;
+  }
+
+header nav{
+max-height: 500px;
+}
+
+}
+
+
+@media (min-width: 60em){
+
+
+    .sMedia {
+    position: absolute;
+    top: 2em;
+    right: 0;
+    background-color: #007;
+  }
+  .sMedia a {
+    display: block;
+    padding: .5em 1em;
+    color:white;
+    margin: 8px;
+  }
+
+  .sMedia a:active{
+    box-shadow: 0 0 4px block;
+    transform: translate(3px) scale(1.3); 
+  }
+
+}
