@@ -1,3 +1,9 @@
+<?php
+    include "connection.php";
+    include "query3.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="is">
 <html>
@@ -10,17 +16,17 @@
 </head>
 <body>
 
-<form action="mutantFood.html">
+<form action="input3.php" method="POST">
   <div class="imgcontainer">
     <img src="myndir/img_mf.jpg" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
     <label><b>first name</b></label>
-    <input type="text" placeholder="Enter first name" name="uname" required>
+    <input type="text" placeholder="Enter first name" name="firstName" required>
 
     <label><b>last name</b></label>
-    <input type="text" placeholder="Enter last name" name="mname" required>
+    <input type="text" placeholder="Enter last name" name="lastName" required>
 
     <label><b>Email</b></label>
     <input type="text" placeholder="Enter email" name="email" required>
